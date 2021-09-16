@@ -1,0 +1,40 @@
+{
+  "product": "tga_petrFilipg01",
+  "version": "0.1.0",
+  "license": "License Commercial",
+  "description": {
+    "en": "",
+    "cs": ""
+  },
+  "docUri": "",
+  "flsUri": "",
+  "imageUri": "",
+  "devkit": {
+    "development": {
+      "appBoxLocationUri": "----- VALUE REQUIRED -----",
+      "appDeploymentUri": null,
+      "resourcePoolUri": "----- VALUE REQUIRED -----"
+    }
+  },
+  "tga_petrFilipg01": {
+    "namespace": "TgaPetrFilip",
+    "sourceUri": "https://cdn.plus4u.net/tga-petrFilipg01/%s/tga_petrFilipg01.min.js",
+    "componentList": [
+      {
+        "code": "TgaPetrFilip.Core.AlertBox",
+        "name": "AlertBox",
+        "tagList": [
+          "TgaPetrFilip",
+          "Core",
+          "AlertBox"
+        ],
+        "docCode": "TgaPetrFilipCoreAlertBox",
+        "desc": "",
+        "icon": "",
+        "imageUri": "",
+        "uuEccReady": false,
+        "template": "<TgaPetrFilip.Core.AlertBox />"
+      }
+    ]
+  }
+}
