@@ -1,12 +1,12 @@
 # uuComponentLibrary
 
 ## AlertBox komponenta
-![alertBox](/home/pfilip/Projects/unicorn/tga/uuComponentLibrary/alertBox.png)
+![alertBox](alertBox.png)
 Demo: tga_petrFilipg01/demo/core/alert-box.html
 
 
 ## UnexpectedSuccess komponenta
-![unexpectedSuccess](/home/pfilip/Projects/unicorn/tga/uuComponentLibrary/unexpectedSuccess.png)
+![unexpectedSuccess](unexpectedSuccess.png)
 Demo: tga_petrFilipg01/demo/core/unexpected-success.html
 
 ## sumCounter funkce
