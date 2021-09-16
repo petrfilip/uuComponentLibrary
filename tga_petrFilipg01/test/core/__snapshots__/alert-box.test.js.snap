@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TgaPetrFilip.Core.AlertBox default props 1`] = `
+<Component
+  className="tgapetrfilip-core-0"
+  colorSchema="info"
+>
+  <Component>
+    <Component
+      colWidth="xs-12 s-1"
+    >
+      <Component
+        icon="uu5-finder"
+        tooltip="aaaaabbbbbccccc"
+      />
+    </Component>
+    <Component
+      colWidth="xs-12 s-10"
+    >
+      <Component>
+        aaaaabbbbbccccc
+      </Component>
+    </Component>
+    <Component
+      colWidth="xs-12 s-1"
+    >
+      <Component
+        onClick={[Function]}
+      >
+        OK
+      </Component>
+    </Component>
+  </Component>
+</Component>
+`;

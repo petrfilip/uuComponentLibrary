@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TgaPetrFilip.Core.UnexpectedSuccess default props 1`] = `
+<Component
+  className="tgapetrfilip-core-0"
+  style="paddingBottom: 10px"
+>
+  <Component>
+    <Component
+      className="center"
+      colWidth="xs-12 s-12"
+    >
+      <Component>
+        Mission accomplished?
+      </Component>
+    </Component>
+  </Component>
+  <Component>
+    <Component
+      className="center"
+      colWidth="xs-12 s-6"
+    >
+      <Component
+        colorSchema="success"
+        onClick={[Function]}
+      >
+        Yes!
+      </Component>
+    </Component>
+    <Component
+      className="center"
+      colWidth="xs-12 s-6"
+    >
+      <Component
+        colorSchema="danger"
+        onClick={[Function]}
+      >
+        No!
+      </Component>
+    </Component>
+  </Component>
+</Component>
+`;

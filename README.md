@@ -1,8 +1,18 @@
 # uuComponentLibrary
 
-- alertBox:
-- [ ] nefunguje border radius, elevation, bgStyle
-- [ ] nefunguje použití barevného schéma na DIV
+## AlertBox komponenta
+![](/home/pfilip/Projects/unicorn/tga/uuComponentLibrary/alertBox.png)
+Demo: tga_petrFilipg01/demo/core/alert-box.html
+
+
+## UnexpectedSuccess komponenta
+![](/home/pfilip/Projects/unicorn/tga/uuComponentLibrary/unexpectedSuccess.png)
+Demo: tga_petrFilipg01/demo/core/unexpected-success.html
+
+## sumCounter funkce
+- sečte všechna čísla v poli zaslaném v parametru
+- veškeré nenumerické znaky jsou ignorovány
+- použití `SumCounter([...])` - snad vše pokryto testy
 
 ## Jak udělat novou uuLib
 

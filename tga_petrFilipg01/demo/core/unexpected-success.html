@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TgaPetrFilip.Core.UnexpectedSuccess Demo</title>
+
+  <script>
+    // prettier-ignore
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0, 1 + bplSegmentCount).join("/") + "/").replace(/\/+/g, "/").replace(/"/g, "");
+      var appAssetsRelativeUrlPath = "public/1.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js" crossorigin="anonymous"></script>
+  <script>
+    // prettier-ignore
+    SystemJS.config({
+      "paths": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-block-layout": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-block-layout.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-bricks-editable": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks-editable.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+        "uu5g04-hooks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-hooks.min.js",
+        "tga_petrFilipg01": "https://cdn.plus4u.net/tga-petrFilipg01/0.0.0/tga_petrFilipg01.min.js",
+      },
+    });
+  </script>
+</head>
+<body>
+<div id="renderHere"></div>
+
+<script
+  src="https://cdn.plus4u.net/uu-app-templateg01/1.0.0/in-browser-transpilation.min.js"
+  crossorigin="anonymous"
+></script>
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import {createComponent} from "uu5g04-hooks";
+  import TgaPetrFilip from "tga_petrFilipg01";
+
+  const Page = createComponent({
+    render() {
+      return (
+        <UU5.Bricks.Container header="TgaPetrFilip.Core.UnexpectedSuccess Demo">
+
+          // color schema
+          <TgaPetrFilip.Core.UnexpectedSuccess colorSchema={"grey"}/>
+          <TgaPetrFilip.Core.UnexpectedSuccess colorSchema={"pink"}/>
+          <TgaPetrFilip.Core.UnexpectedSuccess colorSchema={"blue"}/>
+          <TgaPetrFilip.Core.UnexpectedSuccess colorSchema={"grey"}/>
+          <TgaPetrFilip.Core.UnexpectedSuccess colorSchema={"deep-orange"}/>
+
+          // border radius
+          <TgaPetrFilip.Core.UnexpectedSuccess borderRadius={"0"}/>
+          <TgaPetrFilip.Core.UnexpectedSuccess borderRadius={"3px"}/>
+          <TgaPetrFilip.Core.UnexpectedSuccess borderRadius={"4px"}/>
+          <TgaPetrFilip.Core.UnexpectedSuccess borderRadius={"5px"}/>
+          <TgaPetrFilip.Core.UnexpectedSuccess borderRadius={"100px"}/>
+
+          // bg style
+          <TgaPetrFilip.Core.UnexpectedSuccess bgStyle={"filled"}/>
+          <TgaPetrFilip.Core.UnexpectedSuccess bgStyle={"outline"}/>
+          <TgaPetrFilip.Core.UnexpectedSuccess bgStyle={"transparent"}/>
+          <TgaPetrFilip.Core.UnexpectedSuccess bgStyle={"underline"}/>
+
+          // elevation
+          <TgaPetrFilip.Core.UnexpectedSuccess elevation={-1}/>
+          <TgaPetrFilip.Core.UnexpectedSuccess elevation={0}/>
+          <TgaPetrFilip.Core.UnexpectedSuccess elevation={1}/>
+          <TgaPetrFilip.Core.UnexpectedSuccess elevation={2}/>
+          <TgaPetrFilip.Core.UnexpectedSuccess elevation={3}/>
+          <TgaPetrFilip.Core.UnexpectedSuccess elevation={4}/>
+          <TgaPetrFilip.Core.UnexpectedSuccess elevation={5}/>
+
+        </UU5.Bricks.Container>
+      );
+    },
+  });
+
+  UU5.Common.DOM.render(<Page/>, document.getElementById("renderHere"));
+</script>
+</body>
+</html>

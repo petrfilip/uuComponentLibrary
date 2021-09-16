@@ -34,6 +34,36 @@
         "imageUri": "",
         "uuEccReady": false,
         "template": "<TgaPetrFilip.Core.AlertBox />"
+      },
+      {
+        "code": "TgaPetrFilip.Core.UnexpectedSuccess",
+        "name": "UnexpectedSuccess",
+        "tagList": [
+          "TgaPetrFilip",
+          "Core",
+          "UnexpectedSuccess"
+        ],
+        "docCode": "TgaPetrFilipCoreUnexpectedSuccess",
+        "desc": "",
+        "icon": "",
+        "imageUri": "",
+        "uuEccReady": false,
+        "template": "<TgaPetrFilip.Core.UnexpectedSuccess />"
+      },
+      {
+        "code": "TgaPetrFilip.Core.SumCounter",
+        "name": "SumCounter",
+        "tagList": [
+          "TgaPetrFilip",
+          "Core",
+          "SumCounter"
+        ],
+        "docCode": "TgaPetrFilipCoreSumCounter",
+        "desc": "",
+        "icon": "",
+        "imageUri": "",
+        "uuEccReady": false,
+        "template": "<TgaPetrFilip.Core.SumCounter />"
       }
     ]
   }

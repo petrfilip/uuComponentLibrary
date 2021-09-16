@@ -82,32 +82,31 @@ export const AlertBox = createComponent({
     const attrs = UU5.Common.VisualComponent.getAttrs(props, className);
     const currentNestingLevel = UU5.Utils.NestingLevel.getNestingLevel(props, STATICS);
 
-    if (props.borderRadius) {
-      attrs.style = attrs.style || {};
-      attrs.style.borderRadius = props.borderRadius;
-    }
-
     // todo tady potřebuji poradit:
     // https://uuapp.plus4u.net/uu-bookkit-maing01/0238a88bac124b3ca828835b57144ffa/book/page?code=8c83b23a
     // nefunguje border radius (možná i elevation)
     return currentNestingLevel ? (
-      <UU5.Common.Div {...attrs} style={clicked ? "backgroundColor: grey" : ""}>
+      <UU5.Bricks.Card
+        {...attrs}
+        bgStyle={props.bgStyle}
+        elevation={props.elevation}
+        borderRadius={props.borderRadius}
+        colorSchema={!clicked ? types[props.type].schema : "grey"}
+      >
         <UU5.Bricks.Row>
           <UU5.Bricks.Column colWidth="xs-12 s-1">
             <UU5.Bricks.Icon icon={types[props.type].icon} tooltip={props.text} />
           </UU5.Bricks.Column>
-          <UU5.Bricks.Column colWidth="xs-12 s-9">
+          <UU5.Bricks.Column colWidth="xs-12 s-10">
             <UU5.Bricks.Text className={types[props.type].className}>{add3Dots(props.text)}</UU5.Bricks.Text>
           </UU5.Bricks.Column>
           {currentNestingLevel !== "inline" && (
-            <UU5.Bricks.Column colWidth="xs-12 s-2">
-              <UU5.Bricks.Button onClick={() => setClicked(true)} colorSchema={types[props.type].schema}>
-                OK {currentNestingLevel}
-              </UU5.Bricks.Button>
+            <UU5.Bricks.Column colWidth="xs-12 s-1">
+              <UU5.Bricks.Button onClick={() => setClicked(true)}>OK</UU5.Bricks.Button>
             </UU5.Bricks.Column>
           )}
         </UU5.Bricks.Row>
-      </UU5.Common.Div>
+      </UU5.Bricks.Card>
     ) : null;
     //@@viewOff:render
   },
