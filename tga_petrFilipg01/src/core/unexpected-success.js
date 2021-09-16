@@ -19,11 +19,14 @@ export const UnexpectedSuccess = createComponent({
     borderRadius: UU5.PropTypes.string,
     elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
     colorSchema: UU5.PropTypes.string,
+    nestingLevel: UU5.Environment.getNestingLevelList("box", "inline"),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:defaultProps
-  defaultProps: {},
+  defaultProps: {
+    nestingLevel: "box",
+  },
   //@@viewOff:defaultProps
 
   render(props) {
@@ -42,7 +45,7 @@ export const UnexpectedSuccess = createComponent({
     const attrs = UU5.Common.VisualComponent.getAttrs(props, className);
     const currentNestingLevel = UU5.Utils.NestingLevel.getNestingLevel(props, STATICS);
 
-    return currentNestingLevel && currentNestingLevel !== "inline" ? (
+    const boxComponent = (
       <UU5.Bricks.Card
         {...attrs}
         bgStyle={props.bgStyle}
@@ -70,7 +73,51 @@ export const UnexpectedSuccess = createComponent({
           </UU5.Bricks.Column>
         </UU5.Bricks.Row>
       </UU5.Bricks.Card>
-    ) : null;
+    );
+
+    const smallBoxComponent = (
+      <UU5.Bricks.Card
+        {...attrs}
+        bgStyle={props.bgStyle}
+        elevation={props.elevation}
+        borderRadius={props.borderRadius}
+        colorSchema={props.colorSchema}
+        style={"paddingBottom: 10px"}
+        width={"32%"}
+      >
+        <UU5.Bricks.Row>
+          <UU5.Bricks.Column colWidth="xs-12 s-12" className={"center"}>
+            <UU5.Bricks.P>{text}</UU5.Bricks.P>
+          </UU5.Bricks.Column>
+        </UU5.Bricks.Row>
+
+        <UU5.Bricks.Row>
+          <UU5.Bricks.Column colWidth="xs-12 s-6" className={"center"}>
+            <UU5.Bricks.Button colorSchema={"success"} onClick={() => setText("Unexpected success!")}>
+              Yes!
+            </UU5.Bricks.Button>
+          </UU5.Bricks.Column>
+          <UU5.Bricks.Column colWidth="xs-12 s-6" className={"center"}>
+            <UU5.Bricks.Button colorSchema={"danger"} onClick={() => setText("Try again")}>
+              No!
+            </UU5.Bricks.Button>
+          </UU5.Bricks.Column>
+        </UU5.Bricks.Row>
+      </UU5.Bricks.Card>
+    );
+
+    switch (currentNestingLevel) {
+      case "box":
+      case "bigBoxCollection":
+      case "boxCollection":
+        return boxComponent;
+      case "smallBoxCollection":
+      case "smallBox":
+        return smallBoxComponent;
+      default:
+        return null;
+    }
+
     //@@viewOff:render
   },
 });
