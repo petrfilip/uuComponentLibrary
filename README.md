@@ -1,4 +1,10 @@
-##
+# uuComponentLibrary
+
+- alertBox:
+- [ ] nefunguje border radius, elevation, bgStyle
+- [ ] nefunguje použití barevného schéma na DIV
+
+## Jak udělat novou uuLib
 
 Vygenerování nové libky: `npx create-uulib`
 
